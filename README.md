@@ -1,4 +1,4 @@
-#Crypto-101 - Build your own Bitcoin-alike Blockchain
+# Crypto-101 - Build your own Bitcoin-alike Blockchain
 
 ## Running the Code
 1. To install all dependencies, just run `yarn install` or `npm install`.

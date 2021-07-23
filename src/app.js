@@ -9,21 +9,13 @@ import { Blockchain, Transaction, Block } from "./blockchain";
 const port = process.env.PORT || 5000;
 const blockchain = express();
 
-/* ---------- */
-/* Middelware */
-/* ---------- */
 blockchain.use(bodyParser.json());
 blockchain.use(bodyParser.urlencoded({ extended: true }));
 blockchain.use(cors);
 
-/* ---------------- */
-/* Global Variables */
-/* ---------------- */
 let codeCoin;
 
-/* ------- */
-/* Helpers */
-/* ------- */
+// helper functions start here
 async function findLongestBlockchain() {
     let promiseArray = [];
 
@@ -54,10 +46,7 @@ async function findLongestBlockchain() {
     codeCoin.updateBlockchain(longestChain.chain);
 }
 
-/* --------------- */
-/* REST API Routes */
-/* --------------- */
-
+// Rest API Routes start here
 /**
  * Add new transaction to blockchain.
  * @param {string} fromAddress 

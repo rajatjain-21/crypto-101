@@ -1,8 +1,4 @@
 const SHA256 = require("crypto-js/sha256");
-
-/* ------- */
-/* Classes */
-/* ------- */
 class Transaction{
   constructor(fromAddress, toAddress, amount){
       this.fromAddress = fromAddress;
@@ -36,7 +32,7 @@ class Block {
 
 class Blockchain {
   /**
-   * @param {*} genesisNode URL on which you start the blockchain. Is set to port 4000 with global var.
+   * @param {*} genesisNode URL on which you start the blockchain. Is set to port 5000 with global var.
    */
   constructor(genesisNode) {
       this.chain = [this.createGenesisBlock()];
